@@ -2,9 +2,9 @@
 Contributors: buzztone
 Tags: contact form 7, contact form 7 addon, contact form 7 extension, contact form 7 template, contact form 7 style
 Requires at least: 4.3
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.6.4
+Stable tag: 2.6.5
 Author URI: https://cf7skins.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -117,6 +117,10 @@ Absolutely not. You can create and manage Contact Form 7 forms without any codin
 7. Completed **CF7 Skins Form**
 
 == Changelog ==
+
+= 2.6.5 - 2024-12-06 =
+
+* FIX: Ensure Legend HTML element is removed if legend content is empty
 
 = 2.6.4 - 2024-07-15 =
 

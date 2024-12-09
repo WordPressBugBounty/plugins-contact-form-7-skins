@@ -326,18 +326,23 @@ Class CF7_Skins_Admin_Visual {
 		switch( $item->cf7sType ) {
 			case 'fieldset':
 				$skin_item = $dom->createElement( 'fieldset' );
-				$label = isset( $item->cf7sLabel ) ? wp_strip_all_tags( $item->cf7sLabel ) : ''; // validate, set default to empty
-				
-				// Replace "&" to "cf7s&amp;" to avoid "Unterminated Entity Reference" issue,
-				// and will be replaced back in extract_visual().
-				// @link https://bugs.php.net/bug.php?id=39521
-				// @since 0.7.2
-				$label = str_replace( '&', 'cf7s&amp;', $label );
-				
-				$legend = $dom->createElement( 'legend', $label );
-				$skin_item->appendChild( $legend );
+
+				// Only add legend tag if fieldset label is not empty
+				if ( isset( $item->cf7sLabel ) && ! empty( $item->cf7sLabel ) ) {
+					$label = wp_strip_all_tags( $item->cf7sLabel ); // validate
+
+					// Replace "&" to "cf7s&amp;" to avoid "Unterminated Entity Reference" issue,
+					// and will be replaced back in extract_visual().
+					// @link https://bugs.php.net/bug.php?id=39521
+					// @since 0.7.2
+					$label = str_replace( '&', 'cf7s&amp;', $label );
+
+					$legend = $dom->createElement( 'legend', $label );
+					$skin_item->appendChild( $legend );
+				}
+
 				break;
-				
+
 			case 'paragraph':
 				$skin_item = $dom->createElement( 'p' );
 				

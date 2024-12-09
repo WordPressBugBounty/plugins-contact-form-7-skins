@@ -3,7 +3,7 @@
  * Plugin Name: CF7 Skins for Contact Form 7
  * Plugin URI:  http://cf7skins.com
  * Description: Adds drag & drop Visual Editor with Templates & Styles to Contact Form 7. Requires Contact Form 7.
- * Version:     2.6.4
+ * Version:     2.6.5
  * Author:      Neil Murray
  * Author URI:  http://cf7skins.com
  * License:     GPL-2.0+
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  * @since 0.1.0
  */
-define( 'CF7SKINS_VERSION', '2.6.4' );
+define( 'CF7SKINS_VERSION', '2.6.5' );
 define( 'CF7SKINS_OPTIONS', 'cf7skins' ); // Database option names
 define( 'CF7SKINS_FEATURE_FILTER', false ); // @since 0.4.0
 define( 'CF7SKINS_PATH', plugin_dir_path( __FILE__ ) );
